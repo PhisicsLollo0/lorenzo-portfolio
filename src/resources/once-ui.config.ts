@@ -200,12 +200,12 @@ const schema: SchemaConfig = {
   email: "lorenzo.cavallo@example.com", // TODO: Update with real email
 };
 
-// social links - Currently using template values
+// social links - Using empty strings until personal links are ready
 // TODO: Add personal social media links when ready
 const sameAs: SameAsConfig = {
-  // threads: "https://www.threads.com/@username",
-  // linkedin: "https://www.linkedin.com/in/lorenzo-cavallo",
-  // discord: "",
+  threads: "", // TODO: Add threads URL when ready
+  linkedin: "", // TODO: Add LinkedIn URL (https://www.linkedin.com/in/lorenzo-cavallo)
+  discord: "", // Optional: Add Discord if needed
 };
 
 // social sharing configuration for blog posts
