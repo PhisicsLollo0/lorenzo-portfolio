@@ -14,14 +14,15 @@ import {
 import { home } from "./index";
 
 // IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
-const baseURL: string = "https://demo.magic-portfolio.com";
+// TODO: Update with actual deployed domain
+const baseURL: string = "https://demo.magic-portfolio.com"; // PLACEHOLDER - Update before deployment
 
 const routes: RoutesConfig = {
   "/": true,
   "/about": true,
-  "/work": true,
-  "/blog": true,
-  "/gallery": true,
+  "/work": false, // WORK IN PROGRESS: Will showcase AI/ML projects
+  "/blog": false, // WORK IN PROGRESS: Technical blog coming soon
+  "/gallery": false, // WORK IN PROGRESS: Photo gallery coming soon
 };
 
 const display: DisplayConfig = {
@@ -32,8 +33,9 @@ const display: DisplayConfig = {
 
 // Enable password protection on selected routes
 // Set password in the .env file, refer to .env.example
+// TODO: Configure when work section is ready
 const protectedRoutes: ProtectedRoutesConfig = {
-  "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
+  // "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true, // Template route - commented out
 };
 
 // Import and set font for each variant
@@ -140,8 +142,12 @@ const effects: EffectsConfig = {
   },
 };
 
+// ============================================
+// WORK IN PROGRESS - Mailchimp Newsletter
+// ============================================
+// TODO: Configure Mailchimp when newsletter is ready
 const mailchimp: MailchimpConfig = {
-  action: "https://url/subscribe/post?parameters",
+  action: "https://url/subscribe/post?parameters", // PLACEHOLDER - Update with real Mailchimp URL
   effects: {
     mask: {
       cursor: true,
@@ -185,19 +191,21 @@ const mailchimp: MailchimpConfig = {
 };
 
 // default schema data
+// TODO: Update with personal branding when ready
 const schema: SchemaConfig = {
   logo: "",
-  type: "Organization",
-  name: "Once UI",
+  type: "Person", // Changed from Organization to Person
+  name: "Lorenzo Cavallo",
   description: home.description,
-  email: "lorant@once-ui.com",
+  email: "lorenzo.cavallo@example.com", // TODO: Update with real email
 };
 
-// social links
+// social links - Currently using template values
+// TODO: Add personal social media links when ready
 const sameAs: SameAsConfig = {
-  threads: "https://www.threads.com/@once_ui",
-  linkedin: "https://www.linkedin.com/company/once-ui/",
-  discord: "https://discord.com/invite/5EyAQ4eNdS",
+  // threads: "https://www.threads.com/@username",
+  // linkedin: "https://www.linkedin.com/in/lorenzo-cavallo",
+  // discord: "",
 };
 
 // social sharing configuration for blog posts

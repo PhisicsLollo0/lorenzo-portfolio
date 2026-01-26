@@ -2,20 +2,24 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Lorenzo",
+  lastName: "Cavallo",
+  name: `Lorenzo Cavallo`,
+  role: "Astrophysicist & GenAI Specialist",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "lorenzo.cavallo@example.com", // Update with your actual email
+  location: "Europe/Rome", // Modena, Italy
+  languages: ["English", "Italian"], // optional: Leave the array empty if you don't want to display languages
 };
 
+// ============================================
+// WORK IN PROGRESS - Newsletter
+// ============================================
+// Newsletter feature disabled for now
 const newsletter: Newsletter = {
-  display: true,
+  display: false, // Set to true when ready to launch newsletter
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  description: <>Insights on AI, data science, and astrophysics research</>,
 };
 
 const social: Social = [
@@ -25,25 +29,13 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/phisicslollo0", // Update with your actual GitHub
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-    essential: true,
-  },
-  {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.linkedin.com/in/lorenzo-cavallo", // Update with your actual LinkedIn
     essential: true,
   },
   {
@@ -52,6 +44,13 @@ const social: Social = [
     link: `mailto:${person.email}`,
     essential: true,
   },
+  // Optional: Add Google Scholar, ResearchGate, or ORCID if you have accounts
+  // {
+  //   name: "Google Scholar",
+  //   icon: "scholar",
+  //   link: "https://scholar.google.com/citations?user=YOUR_ID",
+  //   essential: false,
+  // },
 ];
 
 const home: Home = {
@@ -60,23 +59,23 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Bridging Astrophysics and Artificial Intelligence</>,
   featured: {
-    display: true,
+    display: false,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Featured</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured work
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work",
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    I'm Lorenzo, an astrophysicist and AI specialist at <Text as="span" size="xl" weight="strong">Accenture's Center of Excellence for AI</Text> in Modena. I combine my PhD research background in Galactic Archaeology with expertise in <Text as="span" weight="strong">GenAI and Agentic AI</Text> to solve complex data science challenges.
 </>
   ),
 };
@@ -95,16 +94,25 @@ const about: About = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: `mailto:${person.email}`,
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Lorenzo is a GenAI and Agentic AI specialist at <strong>Accenture's Center of Excellence for AI</strong> in Modena, 
+        where he develops <strong>end-to-end Agentic AI systems</strong> and multi-agent architectures for industrial and 
+        functional decision science. His expertise spans the complete lifecycle: from LLM integration and prompt 
+        engineering, through orchestration frameworks and tool development, to production deployment and monitoring.
+        <br /><br />
+        With a unique background bridging astrophysics research and AI engineering, Lorenzo applies rigorous 
+        scientific methodology to building autonomous AI agents that reason, plan, and execute complex tasks. 
+        He holds a PhD in Astronomy from the University of Padua, where he pioneered machine learning applications 
+        in galactic archaeology, developing neural networks for stellar population analysis.
+        <br /><br />
+        He is also a proud member of <strong>GiovaniBlu</strong>, an Italian outreach team promoting accurate information 
+        about nuclear energy and rational environmentalism.
       </>
     ),
   },
@@ -113,41 +121,44 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Accenture",
+        timeframe: "2024 - Present",
+        role: "Ind & Func AI Decision Science Analyst - Center of Excellence for AI",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Designing and developing <strong>end-to-end Agentic AI systems</strong> from concept to production, 
+            including LLM integration, prompt engineering, tool/function calling, orchestration frameworks 
+            (LangChain, LangGraph), and deployment pipelines for autonomous decision-making agents.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Building <strong>multi-agent architectures</strong> with inter-agent communication, task delegation, 
+            and collaborative problem-solving capabilities for industrial and functional decision science applications 
+            at Accenture's Center of Excellence for AI and GenAI in Modena.
+          </>,
+          <>
+            Implementing production-ready GenAI solutions with robust error handling, monitoring, and evaluation 
+            frameworks, leveraging expertise in statistical modeling and rigorous testing methodologies from 
+            astrophysics research.
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "University of Padua",
+        timeframe: "2020 - 2024",
+        role: "PhD Researcher in Astronomy",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Conducted cutting-edge research in <strong>Galactic Archaeology</strong>, using machine learning 
+            to analyze stellar populations and reconstruct the formation history of the Milky Way.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Developed neural network architectures for parameter estimation of open clusters, 
+            published in The Astronomical Journal (2024).
+          </>,
+          <>
+            Applied advanced statistical methods to model neutron star mergers and chemical evolution 
+            of the Galaxy, with publications in MNRAS and A&A.
           </>,
         ],
         images: [],
@@ -156,149 +167,267 @@ const about: About = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "University of Padua",
+        description: <>PhD in Astronomy (2024) - Research focus: Galactic Archaeology, Machine Learning in Astronomy</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "University of Trieste",
+        description: <>MSc in Astrophysics (2020) & BSc in Physics (2018)</>,
+      },
+    ],
+  },
+  publications: {
+    display: true,
+    title: "Selected Publications",
+    papers: [
+      {
+        title: "Parameter Estimation for Open Clusters using an Artificial Neural Network with a QuadTree-based Feature Extractor",
+        journal: "The Astronomical Journal",
+        date: "January 2024",
+        authors: "L. Cavallo, L. Spina, G. Carraro, et al.",
+        link: "https://ui.adsabs.harvard.edu/abs/2024AJ....167...12C",
+      },
+      {
+        title: "On the hosts of neutron star mergers in the nearby Universe",
+        journal: "Monthly Notices of the Royal Astronomical Society",
+        date: "July 2023",
+        authors: "L. Cavallo, L. Greggio",
+        link: "https://ui.adsabs.harvard.edu/abs/2023MNRAS.522.3529C/abstract",
+      },
+      {
+        title: "Europium enrichment and hierarchical formation of the Galactic halo",
+        journal: "Astronomy & Astrophysics",
+        date: "June 2023",
+        authors: "L. Cavallo, G. Cescutti, F. Matteucci",
+        link: "https://ui.adsabs.harvard.edu/abs/2023A%26A...674A.130C/abstract",
+      },
+      {
+        title: "Neutron stars mergers in a stochastic chemical evolution model: impact of time delay distributions",
+        journal: "Monthly Notices of the Royal Astronomical Society",
+        date: "May 2021",
+        authors: "L. Cavallo, G. Cescutti, F. Matteucci",
+        link: "https://ui.adsabs.harvard.edu/abs/2021MNRAS.503....1C/abstract",
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Technical Skills",
     skills: [
       {
-        title: "Figma",
+        title: "Generative AI & Large Language Models",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>
+            Expert in building GenAI applications using state-of-the-art LLMs. Proficient in prompt engineering, 
+            RAG (Retrieval-Augmented Generation) systems, fine-tuning, and deploying production-ready AI solutions. 
+            Experience with OpenAI API, Anthropic Claude, and open-source models.
+          </>
         ),
         tags: [
           {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "OpenAI",
           },
           {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "LangChain",
+          },
+          {
+            name: "RAG",
+          },
+          {
+            name: "Prompt Engineering",
           },
         ],
+        images: [],
       },
       {
-        title: "Next.js",
+        title: "Agentic AI & Multi-Agent Systems",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>
+            Specialized in designing and implementing autonomous AI agents and multi-agent systems for 
+            complex decision-making. Building intelligent agents that can reason, plan, and execute tasks 
+            with minimal human intervention, using frameworks like LangGraph, MCP (Model Context Protocol), 
+            and custom Agent-to-Agent (A2A) communication architectures.
+          </>
         ),
         tags: [
           {
-            name: "JavaScript",
-            icon: "javascript",
+            name: "LangGraph",
           },
           {
-            name: "Next.js",
-            icon: "nextjs",
+            name: "MCP",
           },
           {
-            name: "Supabase",
-            icon: "supabase",
+            name: "A2A Communication",
+          },
+          {
+            name: "Autonomous Agents",
+          },
+          {
+            name: "Multi-Agent Systems",
           },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
+        images: [],
+      },
+      {
+        title: "Cloud & DevOps",
+        description: (
+          <>
+            Experienced in deploying and managing AI solutions on cloud platforms with containerization 
+            and orchestration technologies. Proficient in building scalable, production-ready infrastructure 
+            for GenAI applications using Azure cloud services, Kubernetes for container orchestration, 
+            and Docker for containerization.
+          </>
+        ),
+        tags: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "Azure",
+          },
+          {
+            name: "Kubernetes",
+          },
+          {
+            name: "Docker",
+          },
+          {
+            name: "MLOps",
           },
         ],
+        images: [],
+      },
+      {
+        title: "Machine Learning & Data Science",
+        description: (
+          <>
+            Deep expertise in machine learning, neural networks, and advanced statistical methods. 
+            Skilled in developing custom ML models for complex problems, from astronomical data analysis 
+            to industrial applications. Proficient with TensorFlow, PyTorch, scikit-learn, and modern MLOps practices.
+          </>
+        ),
+        tags: [
+          {
+            name: "Python",
+            icon: "python",
+          },
+          {
+            name: "TensorFlow",
+          },
+          {
+            name: "PyTorch",
+          },
+          {
+            name: "scikit-learn",
+          },
+        ],
+        images: [],
+      },
+      {
+        title: "Research & Astrophysics",
+        description: (
+          <>
+            PhD-level expertise in Galactic Archaeology, stellar evolution, and open clusters. 
+            Pioneered machine learning applications in astronomy, including neural network-based 
+            parameter estimation for stellar populations. Strong background in computational astrophysics 
+            and large-scale astronomical data analysis.
+          </>
+        ),
+        tags: [
+          {
+            name: "Galactic Archaeology",
+          },
+          {
+            name: "Neural Networks",
+          },
+          {
+            name: "Stellar Evolution",
+          },
+          {
+            name: "Big Data",
+          },
+        ],
+        images: [],
       },
     ],
   },
 };
 
+// ============================================
+// WORK IN PROGRESS - Blog Section
+// ============================================
+// Coming soon: Technical blog about AI, ML, and astrophysics
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+  title: "Writing about AI and tech...",
+  description: `Technical insights and thoughts from ${person.name}`,
 };
 
+// ============================================
+// WORK IN PROGRESS - Projects Section
+// ============================================
+// Coming soon: Showcase of AI/ML projects and case studies
 const work: Work = {
   path: "/work",
   label: "Work",
   title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  description: `AI and ML projects by ${person.name}`,
 };
 
+// ============================================
+// WORK IN PROGRESS - Gallery Section
+// ============================================
+// Coming soon: Personal photo gallery
 const gallery: Gallery = {
   path: "/gallery",
   label: "Gallery",
   title: `Photo gallery – ${person.name}`,
   description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
-  images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-  ],
+  images: [],
+  // Template images commented out - will be replaced with personal photos
+  // images: [
+  //   {
+  //     src: "/images/gallery/horizontal-1.jpg",
+  //     alt: "image",
+  //     orientation: "horizontal",
+  //   },
+  //   {
+  //     src: "/images/gallery/vertical-4.jpg",
+  //     alt: "image",
+  //     orientation: "vertical",
+  //   },
+  //   {
+  //     src: "/images/gallery/horizontal-3.jpg",
+  //     alt: "image",
+  //     orientation: "horizontal",
+  //   },
+  //   {
+  //     src: "/images/gallery/vertical-1.jpg",
+  //     alt: "image",
+  //     orientation: "vertical",
+  //   },
+  //   {
+  //     src: "/images/gallery/vertical-2.jpg",
+  //     alt: "image",
+  //     orientation: "vertical",
+  //   },
+  //   {
+  //     src: "/images/gallery/horizontal-2.jpg",
+  //     alt: "image",
+  //     orientation: "horizontal",
+  //   },
+  //   {
+  //     src: "/images/gallery/horizontal-4.jpg",
+  //     alt: "image",
+  //     orientation: "horizontal",
+  //   },
+  //   {
+  //     src: "/images/gallery/vertical-3.jpg",
+  //     alt: "image",
+  //     orientation: "vertical",
+  //   },
+  // ],
 };
 
 export { person, social, newsletter, home, about, blog, work, gallery };

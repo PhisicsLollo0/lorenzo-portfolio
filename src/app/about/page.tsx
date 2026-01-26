@@ -40,14 +40,19 @@ export default function About() {
       items: about.work.experiences.map((experience) => experience.company),
     },
     {
+      title: about.technical.title,
+      display: about.technical.display,
+      items: about.technical.skills.map((skill) => skill.title),
+    },
+    {
       title: about.studies.title,
       display: about.studies.display,
       items: about.studies.institutions.map((institution) => institution.name),
     },
     {
-      title: about.technical.title,
-      display: about.technical.display,
-      items: about.technical.skills.map((skill) => skill.title),
+      title: about.publications?.title || "Publications",
+      display: about.publications?.display || false,
+      items: about.publications?.papers.map((paper) => paper.title) || [],
     },
   ];
   return (
@@ -132,8 +137,8 @@ export default function About() {
                   backdropFilter: "blur(var(--static-space-1))",
                 }}
               >
-                <Icon paddingLeft="12" name="calendar" onBackground="brand-weak" />
-                <Row paddingX="8">Schedule a call</Row>
+                <Icon paddingLeft="12" name="email" onBackground="brand-weak" />
+                <Row paddingX="8">Get in Touch</Row>
                 <IconButton
                   href={about.calendar.link}
                   data-border="rounded"
@@ -261,26 +266,6 @@ export default function About() {
             </>
           )}
 
-          {about.studies.display && (
-            <>
-              <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
-                {about.studies.title}
-              </Heading>
-              <Column fillWidth gap="l" marginBottom="40">
-                {about.studies.institutions.map((institution, index) => (
-                  <Column key={`${institution.name}-${index}`} fillWidth gap="4">
-                    <Text id={institution.name} variant="heading-strong-l">
-                      {institution.name}
-                    </Text>
-                    <Text variant="heading-default-xs" onBackground="neutral-weak">
-                      {institution.description}
-                    </Text>
-                  </Column>
-                ))}
-              </Column>
-            </>
-          )}
-
           {about.technical.display && (
             <>
               <Heading
@@ -291,7 +276,7 @@ export default function About() {
               >
                 {about.technical.title}
               </Heading>
-              <Column fillWidth gap="l">
+              <Column fillWidth gap="32">
                 {about.technical.skills.map((skill, index) => (
                   <Column key={`${skill}-${index}`} fillWidth gap="4">
                     <Text id={skill.title} variant="heading-strong-l">
@@ -330,6 +315,61 @@ export default function About() {
                         ))}
                       </Row>
                     )}
+                  </Column>
+                ))}
+              </Column>
+            </>
+          )}
+
+          {about.studies.display && (
+            <>
+              <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginTop="40" marginBottom="m">
+                {about.studies.title}
+              </Heading>
+              <Column fillWidth gap="l" marginBottom="40">
+                {about.studies.institutions.map((institution, index) => (
+                  <Column key={`${institution.name}-${index}`} fillWidth gap="4">
+                    <Text id={institution.name} variant="heading-strong-l">
+                      {institution.name}
+                    </Text>
+                    <Text variant="heading-default-xs" onBackground="neutral-weak">
+                      {institution.description}
+                    </Text>
+                  </Column>
+                ))}
+              </Column>
+            </>
+          )}
+
+          {about.publications?.display && (
+            <>
+              <Heading as="h2" id={about.publications.title} variant="display-strong-s" marginTop="40" marginBottom="m">
+                {about.publications.title}
+              </Heading>
+              <Column fillWidth gap="l" marginBottom="40">
+                {about.publications.papers.map((paper, index) => (
+                  <Column key={`${paper.title}-${index}`} fillWidth gap="8">
+                    <Text id={paper.title} variant="heading-strong-l">
+                      {paper.title}
+                    </Text>
+                    <Text variant="body-default-s" onBackground="neutral-weak">
+                      {paper.authors}
+                    </Text>
+                    <Row gap="8" wrap>
+                      <Text variant="body-default-s" onBackground="brand-weak">
+                        {paper.journal}
+                      </Text>
+                      <Text variant="body-default-s" onBackground="neutral-weak">
+                        {paper.date}
+                      </Text>
+                    </Row>
+                    <Button
+                      href={paper.link}
+                      size="s"
+                      variant="tertiary"
+                      label="View on NASA/ADS"
+                      suffixIcon="external"
+                    />
                   </Column>
                 ))}
               </Column>

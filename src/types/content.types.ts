@@ -105,7 +105,7 @@ export interface Home extends BasePageConfig {
 
 /**
  * About page configuration.
- * @description Configuration for the About page, including sections for table of contents, avatar, calendar, introduction, work experience, studies, and technical skills.
+ * @description Configuration for the About page, including sections for table of contents, avatar, calendar, introduction, work experience, studies, publications, and technical skills.
  */
 export interface About extends BasePageConfig {
   /** Table of contents configuration */
@@ -177,6 +177,26 @@ export interface About extends BasePageConfig {
       name: string;
       /** Description of studies */
       description: React.ReactNode;
+    }>;
+  };
+  /** Publications section */
+  publications?: {
+    /** Whether to display publications section */
+    display: boolean;
+    /** Title for the publications section */
+    title: string;
+    /** List of publications */
+    papers: Array<{
+      /** Publication title */
+      title: string;
+      /** Journal or conference name */
+      journal: string;
+      /** Publication date */
+      date: string;
+      /** Authors */
+      authors: string;
+      /** Link to publication (NASA/ADS, DOI, etc.) */
+      link: string;
     }>;
   };
   /** Technical skills section */

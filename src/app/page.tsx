@@ -100,9 +100,10 @@ export default function Home() {
           </RevealFx>
         </Column>
       </Column>
-      <RevealFx translateY="16" delay={0.6}>
+      {/* WORK IN PROGRESS: Projects showcase - will be enabled when projects are ready */}
+      {/* <RevealFx translateY="16" delay={0.6}>
         <Projects range={[1, 1]} />
-      </RevealFx>
+      </RevealFx> */}
       {routes["/blog"] && (
         <Column fillWidth gap="24" marginBottom="l">
           <Row fillWidth paddingRight="64">
@@ -123,8 +124,10 @@ export default function Home() {
           </Row>
         </Column>
       )}
-      <Projects range={[2]} />
-      <Mailchimp />
+      {/* WORK IN PROGRESS: Additional projects - will be enabled when projects are ready */}
+      {/* <Projects range={[2]} /> */}
+      {/* WORK IN PROGRESS: Newsletter - will be enabled when ready */}
+      {/* <Mailchimp /> */}
     </Column>
   );
 }
