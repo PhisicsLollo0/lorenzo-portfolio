@@ -5,9 +5,9 @@ const person: Person = {
   firstName: "Lorenzo",
   lastName: "Cavallo",
   name: `Lorenzo Cavallo`,
-  role: "Astrophysicist & GenAI Specialist",
+  role: "Agentic AI / GenAI Engineer (PhD)",
   avatar: "/images/avatar.jpg",
-  email: "lorenzo.cavallo@example.com", // Update with your actual email
+  email: "cavallo.lorenzo@outlook.com", // Update with your actual email
   location: "Europe/Rome", // Modena, Italy
   languages: ["English", "Italian"], // optional: Leave the array empty if you don't want to display languages
 };
@@ -44,10 +44,16 @@ const social: Social = [
     link: `mailto:${person.email}`,
     essential: true,
   },
+  {
+    name: "Publications",
+    icon: "book",
+    link: "https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0001-5831-1889&sort=date%20desc%2C%20bibcode%20desc&p_=0",
+    essential: true,
+  },
   // Optional: Add Google Scholar, ResearchGate, or ORCID if you have accounts
   // {
   //   name: "Google Scholar",
-  //   icon: "scholar",
+  //   icon: "book",
   //   link: "https://scholar.google.com/citations?user=YOUR_ID",
   //   essential: false,
   // },
@@ -59,7 +65,7 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Bridging Astrophysics and Artificial Intelligence</>,
+  headline: <>I don’t just train models — I engineer agentic AI systems that reason, plan, and act.</>,
   featured: {
     display: false,
     title: (
@@ -75,8 +81,8 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Lorenzo, an astrophysicist and AI specialist at <Text as="span" size="xl" weight="strong">Accenture's Center of Excellence for AI</Text> in Modena. I combine my PhD research background in Galactic Archaeology with expertise in <Text as="span" weight="strong">GenAI and Agentic AI</Text> to solve complex data science challenges.
-</>
+      Astrophysics PhD turned <Text as="span" weight="strong">Agentic AI systems engineer</Text>, designing GenAI and multi-agent systems end-to-end — from problem framing and evaluation to production integration.
+    </>
   ),
 };
 
@@ -101,18 +107,23 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Lorenzo is a GenAI and Agentic AI specialist at <strong>Accenture's Center of Excellence for AI</strong> in Modena, 
-        where he develops <strong>end-to-end Agentic AI systems</strong> and multi-agent architectures for industrial and 
-        functional decision science. His expertise spans the complete lifecycle: from LLM integration and prompt 
-        engineering, through orchestration frameworks and tool development, to production deployment and monitoring.
-        <br /><br />
-        With a unique background bridging astrophysics research and AI engineering, Lorenzo applies rigorous 
-        scientific methodology to building autonomous AI agents that reason, plan, and execute complex tasks. 
-        He holds a PhD in Astronomy from the University of Padua, where he pioneered machine learning applications 
-        in galactic archaeology, developing neural networks for stellar population analysis.
-        <br /><br />
-        He is also a proud member of <strong>GiovaniBlu</strong>, an Italian outreach team promoting accurate information 
-        about nuclear energy and rational environmentalism.
+        <p>
+          <strong>Agentic AI / GenAI Systems Engineer</strong> designing and delivering end-to-end autonomous systems —
+          from problem definition and architecture to production deployment.
+        </p>
+        <p>
+          At <strong>Accenture’s Center of Excellence for AI</strong>, I build agentic and multi-agent systems that
+          reason, plan, and act inside real enterprise workflows: tool use, orchestration, evaluation, and
+          monitoring.
+        </p>
+        <p>
+          I hold a PhD in Astronomy (University of Padua) and bring a scientific mindset to engineering:
+          measurable outcomes, clear baselines, and disciplined experimentation.
+        </p>
+        <p>
+          Outside work, I’m part of <strong>GiovaniBlu</strong>, an Italian outreach team promoting accurate information
+          about nuclear energy and rational environmentalism.
+        </p>
       </>
     ),
   },
@@ -126,19 +137,17 @@ const about: About = {
         role: "Ind & Func AI Decision Science Analyst - Center of Excellence for AI",
         achievements: [
           <>
-            Designing and developing <strong>end-to-end Agentic AI systems</strong> from concept to production, 
-            including LLM integration, prompt engineering, tool/function calling, orchestration frameworks 
-            (LangChain, LangGraph), and deployment pipelines for autonomous decision-making agents.
+            Designing and delivering <strong>end-to-end agentic AI systems</strong> from concept to production:
+            agent architecture, tool/function calling, retrieval and workflow orchestration, plus evaluation
+            and production rollout.
           </>,
           <>
-            Building <strong>multi-agent architectures</strong> with inter-agent communication, task delegation, 
-            and collaborative problem-solving capabilities for industrial and functional decision science applications 
-            at Accenture's Center of Excellence for AI and GenAI in Modena.
+            Building <strong>multi-agent architectures</strong> for industrial and functional decision science:
+            task decomposition, delegation, coordination patterns, and human-in-the-loop boundaries.
           </>,
           <>
-            Implementing production-ready GenAI solutions with robust error handling, monitoring, and evaluation 
-            frameworks, leveraging expertise in statistical modeling and rigorous testing methodologies from 
-            astrophysics research.
+            Shipping GenAI systems with strong reliability signals: guardrails, observability, and
+            evaluation harnesses informed by statistical rigor from research.
           </>,
         ],
         images: [],
@@ -218,38 +227,13 @@ const about: About = {
     title: "Technical Skills",
     skills: [
       {
-        title: "Generative AI & Large Language Models",
-        description: (
-          <>
-            Expert in building GenAI applications using state-of-the-art LLMs. Proficient in prompt engineering, 
-            RAG (Retrieval-Augmented Generation) systems, fine-tuning, and deploying production-ready AI solutions. 
-            Experience with OpenAI API, Anthropic Claude, and open-source models.
-          </>
-        ),
-        tags: [
-          {
-            name: "OpenAI",
-          },
-          {
-            name: "LangChain",
-          },
-          {
-            name: "RAG",
-          },
-          {
-            name: "Prompt Engineering",
-          },
-        ],
-        images: [],
-      },
-      {
         title: "Agentic AI & Multi-Agent Systems",
         description: (
           <>
-            Specialized in designing and implementing autonomous AI agents and multi-agent systems for 
-            complex decision-making. Building intelligent agents that can reason, plan, and execute tasks 
-            with minimal human intervention, using frameworks like LangGraph, MCP (Model Context Protocol), 
-            and custom Agent-to-Agent (A2A) communication architectures.
+            Designing agentic systems that <strong>reason, plan, and act</strong> — not just chat.
+            I focus on the full system: task decomposition, tool use, memory and retrieval, coordination
+            patterns for multi-agent workflows, and evaluation for reliability.
+            Frameworks (e.g. LangGraph, MCP) support the architecture, not the other way around.
           </>
         ),
         tags: [
@@ -272,13 +256,38 @@ const about: About = {
         images: [],
       },
       {
+        title: "Generative AI & Large Language Models",
+        description: (
+          <>
+            Building GenAI capabilities as part of larger systems: LLM integration, prompt design,
+            RAG (Retrieval-Augmented Generation), and model selection for real constraints.
+            Comfortable across proprietary and open-source models, with a bias toward measurable quality.
+          </>
+        ),
+        tags: [
+          {
+            name: "OpenAI",
+          },
+          {
+            name: "RAG",
+          },
+          {
+            name: "Prompt Engineering",
+          },
+          {
+            name: "Evaluation",
+          },
+        ],
+        images: [],
+      },
+      {
         title: "Cloud & DevOps",
         description: (
           <>
-            Experienced in deploying and managing AI solutions on cloud platforms with containerization 
-            and orchestration technologies. Proficient in building scalable, production-ready infrastructure 
-            for GenAI applications using Azure cloud services, Kubernetes for container orchestration, 
-            and Docker for containerization.
+            Production delivery literacy for AI systems: containerized services, CI/CD boundaries,
+            observability, and scaling considerations.
+            I can collaborate effectively with platform teams and make sound architectural tradeoffs around
+            deployment, monitoring, and MLOps requirements — without positioning as a full-time infra owner.
           </>
         ),
         tags: [
