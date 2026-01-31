@@ -285,7 +285,7 @@ const about: About = {
         description: (
           <>
             Production delivery literacy for AI systems: containerized services, CI/CD boundaries,
-            observability, and scaling considerations.
+            observability, scaling considerations, and Infrastructure-as-Code (Terraform).
             I can collaborate effectively with platform teams and make sound architectural tradeoffs around
             deployment, monitoring, and MLOps requirements — without positioning as a full-time infra owner.
           </>
@@ -299,6 +299,9 @@ const about: About = {
           },
           {
             name: "Docker",
+          },
+          {
+            name: "Terraform",
           },
           {
             name: "MLOps",
